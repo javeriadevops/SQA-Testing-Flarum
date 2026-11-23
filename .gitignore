@@ -1,0 +1,28 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+**/config.php
+
+# Dependencies
+node_modules/
+vendor/
+
+# Playwright generated files
+playwright-report/
+test-results/
+blob-report/
+
+# Local databases and temporary files
+*.sqlite
+*.sqlite3
+*.db
+*.log
+.cache/
+.DS_Store
+
+# Backup files
+*.backup
+
+# Additional generated test files
+test-results*/

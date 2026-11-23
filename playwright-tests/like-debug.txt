@@ -1,0 +1,35 @@
+◇ injected env (2) from .env
+
+Running 1 test using 1 worker
+
+◇ injected env (0) from .env
+  ✘  1 [chromium] › tests/like.spec.js:5:1 › TC-19: Authenticated user can like a post (8.0s)
+
+
+  1) [chromium] › tests/like.spec.js:5:1 › TC-19: Authenticated user can like a post ───────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.Post').filter({ hasText: /Edited SQA reply/ }).first().getByText('Like', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.Post').filter({ hasText: /Edited SQA reply/ }).first().getByText('Like', { exact: true }) with timeout 5000ms
+      - waiting for locator('.Post').filter({ hasText: /Edited SQA reply/ }).first().getByText('Like', { exact: true })
+
+
+      55 |
+      56 |   // Like the post
+    > 57 |   await expect(likeButton).toBeVisible();
+         |                            ^
+      58 |   await likeButton.click();
+      59 |
+      60 |   // Verify the same post is liked
+        at /workspaces/SQA-Testing-Flarum/playwright-tests/tests/like.spec.js:57:28
+
+    Error Context: test-results/like-TC-19-Authenticated-user-can-like-a-post-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/like.spec.js:5:1 › TC-19: Authenticated user can like a post ────────────────
